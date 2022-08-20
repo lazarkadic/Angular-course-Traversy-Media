@@ -1,0 +1,11 @@
+<header>
+    <h1>{{ title }}</h1>
+    <!-- hasRoute('/') nam omogucava da dugme prikazemo samo na index stranici! -->
+    <!-- Prosledjujemo button componenti vrednosti za property 'color' i 'text' -->
+    <app-button 
+        *ngIf="hasRoute('/')"
+        color="{{showAddTask ? 'red' : 'green'}}" 
+        text="{{showAddTask ? 'Close' : 'Add'}}" 
+        (btnClick)="toggleAddTask()">
+    </app-button>
+</header>

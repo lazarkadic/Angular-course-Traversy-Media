@@ -1,0 +1,5 @@
+<!-- [ngClass] ce da doda klasu za stil ovom div-u ako je property this.reminder == true, moze da se zadaje vise klasa -->
+<div class="task" [ngClass]="{'reminder': task.reminder, 'falseReminder' : !task.reminder}" (dblclick)="onToggle(task)">
+    <h3>{{ task.text }} <fa-icon (click)="onDelete(task)" [ngStyle]="{'color':'red'}" [icon]="faTimes"></fa-icon></h3>
+    <p>{{ task.day }}</p>
+</div>
